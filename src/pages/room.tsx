@@ -3,6 +3,7 @@ import { ArrowRight, ArrowUp, Share2 } from "lucide-react"
 import { toast } from "sonner"
 
 import amaLogo from '../assets/ama-logo.svg'
+import { Message } from "../components/message"
 
 export function Room() {
   const { roomId } = useParams()
@@ -59,23 +60,8 @@ export function Room() {
         </form>
 
         <ol className="list-decimal list-outside px-3 space-y-8">
-          <li className="ml-4 leading-relaxed text-zinc-100">
-            Uma pergunta teste e quais desdobramentos ela pode ter. o ideal é que tivesse mais de uma linha para que possamos ver como o texto se comporta.
-            dessa maneira, podemos ter uma ideia de como o texto se comporta em mais de uma linha.
-
-            <button type="button" className="mt-3 flex items-center gap-2 text-orange-400 text-sm font-medium hover:text-orange-500">
-              <ArrowUp className="size-4" />
-              Curtir pergunta ({12})
-            </button>
-          </li>
-          <li className="ml-4 leading-relaxed text-zinc-100">
-            Uma pergunta teste e quais desdobramentos ela pode ter. o ideal é que tivesse mais de uma linha para que possamos ver como o texto se comporta.
-            dessa maneira, podemos ter uma ideia de como o texto se comporta em mais de uma linha.
-            <button type="button" className="mt-3 flex items-center gap-2 text-zinc-400 text-sm font-medium hover:text-zinc-300">
-              <ArrowUp className="size-4" />
-              Curtir pergunta ({0})
-            </button>
-          </li>
+          <Message text="Como faço para começar a programar?" amountOfReactions={100} anserwed />
+          <Message text="adicione um texto grande aqui para ver como a mensagem se comporta" amountOfReactions={1} />
         </ol>
       </div>
     </div>
